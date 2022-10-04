@@ -1,0 +1,3 @@
+xin chào
+pi=3.14
+đóng3.14Student{id=100, name='Nguyễn Văn An'}
