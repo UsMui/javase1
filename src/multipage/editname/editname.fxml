@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="multipage.editname.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="txtEdit" layoutX="201.0" layoutY="117.0" prefHeight="25.0" prefWidth="198.0" />
+      <Button onAction="#goToList" layoutX="330.0" layoutY="175.0" mnemonicParsing="false" text="Edit name" />
+      <Text fx:id="subjectEdit" layoutX="146.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="320.13671875" />
+   </children>
+</Pane>
