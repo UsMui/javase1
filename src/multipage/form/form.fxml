@@ -5,6 +5,7 @@
 <?import javafx.scene.layout.*?>
 
 
+<?import javafx.scene.text.Text?>
 <Pane fx:controller="multipage.form.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button onAction="#goToList" layoutX="61.0" layoutY="40.0" mnemonicParsing="false" text="&lt;&lt; Back To List" />
@@ -12,5 +13,6 @@
       <TextField fx:id="txtHours" layoutX="226.0" layoutY="253.0" prefHeight="25.0" prefWidth="308.0" promptText="Hours" />
       <TextField fx:id="txtName" layoutX="226.0" layoutY="175.0" prefHeight="25.0" prefWidth="308.0" promptText="Name" />
       <Button onAction="#addSubject" layoutX="454.0" layoutY="312.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Submit" />
+      <Text fx:id="errors" fill="#f80b0b" layoutX="226.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
    </children>
 </Pane>
