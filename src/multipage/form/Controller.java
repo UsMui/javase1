@@ -53,7 +53,6 @@ public class Controller {
         }catch (Exception e){
             errors.setVisible(true);
             errors.setText(e.getMessage());
-
         }
 
 

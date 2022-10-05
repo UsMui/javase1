@@ -37,7 +37,7 @@ public class Subject {
 
     @Override
     public String toString() {
-        return "Subject" + code +" - "+name+" - "+hours;
+        return "Subject: " + code +" - "+name+" - "+hours;
 
     }
 }

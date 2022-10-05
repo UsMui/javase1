@@ -23,7 +23,8 @@ public class Controller extends multipage.list.Controller implements Initializab
             Main.rootStage.setScene(listScene);
         }
     public void initialize(URL location, ResourceBundle resources){
-            subjectEdit.setText("AAAAAAAAA");
+
+            subjectEdit.setText(subjectList.get(0).toString());
     }
 
 
