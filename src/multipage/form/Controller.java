@@ -21,14 +21,14 @@ public class Controller {
     public static ObservableList<Subject> subjectList = FXCollections.observableArrayList();
 
 
-    public void goToList(ActionEvent actionEvent) throws Exception {
+    public void goToList() throws Exception {
         Parent listPage = FXMLLoader.load(getClass().getResource("../list/list.fxml"));
         Scene listScene = new Scene(listPage,800,600);
         Main.rootStage.setTitle("ListView");
         Main.rootStage.setScene(listScene);
     }
 
-    public void addSubject(ActionEvent actionEvent) {
+    public void addSubject() {
         try {
             errors.setVisible(true);
             if(txtCode.getText().isEmpty()||txtName.getText().isEmpty()||txtHours.getText().isEmpty()){
@@ -49,6 +49,8 @@ public class Controller {
                 subjectList.add(sb);
             }
             clear();
+
+            goToList();
 
         }catch (Exception e){
             errors.setVisible(true);
