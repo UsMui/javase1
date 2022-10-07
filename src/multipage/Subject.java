@@ -1,11 +1,11 @@
-package multipage.form;
+package multipage;
 
 public class Subject {
     public String code;
     public String name;
-    public double hours;
+    public Integer hours;
 
-    public Subject(String code, String name, double hours) {
+    public Subject(String code, String name, Integer hours) {
         this.code = code;
         this.name = name;
         this.hours = hours;
@@ -27,17 +27,17 @@ public class Subject {
         this.name = name;
     }
 
-    public double getHours() {
+    public Integer getHours() {
         return hours;
     }
 
-    public void setHours(double hours) {
+    public void setHours(Integer hours) {
         this.hours = hours;
     }
 
     @Override
     public String toString() {
-        return "Subject: " + code +" - "+name+" - "+hours;
+        return "Subject: " + getCode() +" - "+getName()+" - "+getHours();
 
     }
 }

@@ -1,6 +1,6 @@
 package multipage.list;
 
-import baitapjx2.Student;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -8,16 +8,17 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
-import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
 import multipage.Main;
-import multipage.form.Subject;
+import multipage.Subject;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Controller extends multipage.form.Controller implements Initializable {
+public class Controller implements Initializable {
     public ListView<Subject> lv;
+    public static ObservableList<Subject> list = FXCollections.observableArrayList();
+    public static Subject editItem;
 
 
 
@@ -37,16 +38,22 @@ public class Controller extends multipage.form.Controller implements Initializab
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        lv.setItems(subjectList);
+//        lv.setItems(subjectList);
+//        list.add(new Subject("JP1","Java Programing 1",40));
+//        list.add(new Subject("JP2","Java Programing 2",40));
+        lv.setItems(list);
+
     }
 
-    public void editname() throws Exception {
-        Parent listPage = FXMLLoader.load(getClass().getResource("../editname/editname.fxml"));
+
+    public void edit(ActionEvent actionEvent) throws Exception {
+        editItem =lv.getSelectionModel().getSelectedItem();//Lấy phần tử đang được nhấn chuột
+        if(editItem==null) return;
+
+        Parent listPage = FXMLLoader.load(getClass().getResource("../editname/form.fxml"));
         Scene listScene = new Scene(listPage,800,600);
         Main.rootStage.setTitle("Edit tên môn học");
         Main.rootStage.setScene(listScene);
         Main.rootStage.show();
-
     }
-
 }

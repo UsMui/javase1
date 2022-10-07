@@ -1,16 +1,14 @@
 package multipage.form;
 
-import baitapjx2.Student;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import multipage.Main;
+import multipage.Subject;
 
 public class Controller {
     public TextField txtCode;
@@ -18,7 +16,7 @@ public class Controller {
     public TextField txtHours;
     public Text errors;
 
-    public static ObservableList<Subject> subjectList = FXCollections.observableArrayList();
+//    public static ObservableList<Subject> subjectList = FXCollections.observableArrayList();
 
 
     public void goToList() throws Exception {
@@ -34,23 +32,23 @@ public class Controller {
             if(txtCode.getText().isEmpty()||txtName.getText().isEmpty()||txtHours.getText().isEmpty()){
                 throw new Exception("Vui lòng nhập đầy đủ thông tin");
             }
-            Double h = Double.parseDouble(txtHours.getText());
+            Integer h = Integer.parseInt(txtHours.getText());
             if(h<0){
                 throw new Exception("Vui lòng nhập đúng giờ");
             }
-            Subject sb = new Subject(txtCode.getText(),txtName.getText(),h);
-            int k=0;
-            for(Subject s:subjectList){
+
+
+            for(Subject s: multipage.list.Controller.list){
                 if(s.getCode().equals(txtCode.getText())){
-                    k++;
+                   throw new Exception("Vui lòng nhập lại code");
                 }
             }
-            if(k==0){
-                subjectList.add(sb);
-            }
+
+            multipage.list.Controller.list.add(new Subject(txtCode.getText(),txtName.getText(),h));
+
             clear();
 
-            goToList();
+            goToList();//Hoặc giữ tham số goToList(null);
 
         }catch (Exception e){
             errors.setVisible(true);

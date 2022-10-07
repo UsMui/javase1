@@ -4,10 +4,10 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<Pane fx:controller="multipage.list.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="multipage.list.Controller">
    <children>
-      <ListView fx:id="lv" onMouseClicked="#editname" layoutX="20.0" layoutY="88.0" prefHeight="278.0" prefWidth="563.0" />
-      <Button onAction="#goToForm" layoutX="484.0" layoutY="41.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="Add Subject" />
+      <ListView fx:id="lv" layoutX="20.0" layoutY="88.0" prefHeight="278.0" prefWidth="563.0" />
+      <Button layoutX="484.0" layoutY="41.0" mnemonicParsing="false" onAction="#goToForm" prefHeight="25.0" prefWidth="99.0" text="Add Subject" />
+      <Button onAction="#edit" layoutX="20.0" layoutY="41.0" mnemonicParsing="false" text="Edit" />
    </children>
 </Pane>
