@@ -10,8 +10,14 @@ public class Flight {
     }
 
     public Flight(int number, String destination) {
-        this.number = number;
-        this.destination = destination;
+        if(number>0){
+            this.number = number;
+            this.destination = destination;
+        }else{
+            this.number = 0;
+            this.destination ="";
+        }
+
     }
 
     public int getNumber() {
