@@ -14,11 +14,12 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Input number of flight");
         int num = sc.nextInt();
+        sc.nextLine();
         System.out.println("Input destination");
         String des=sc.nextLine();
 
         if(num<0){
-            Flight fl = new Flight(0,"");
+            Flight fl = new Flight();
             fl.display();
         }else{
             Flight fl = new Flight(num,des);
