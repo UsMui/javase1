@@ -1,11 +1,11 @@
 package Exam.flight;
 
 public class Flight {
-    public int number;
-    public String destination;
+    int number;
+    String destination;
 
     public Flight() {
-        this.destination = null;
+        this.destination = "";
         this.number = 0;
     }
 
