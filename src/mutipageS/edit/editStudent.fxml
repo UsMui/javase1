@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="mutipageS.edit.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="txtName" layoutX="189.0" layoutY="25.0" prefHeight="25.0" prefWidth="270.0" promptText="Name" />
+      <TextField fx:id="txtCode" layoutX="189.0" layoutY="98.0" prefHeight="25.0" prefWidth="270.0" promptText="Code" />
+      <TextField fx:id="txtBirth" layoutX="189.0" layoutY="169.0" prefHeight="25.0" prefWidth="270.0" promptText="DateOfbirth" />
+      <TextField fx:id="txtMark" layoutX="189.0" layoutY="249.0" prefHeight="25.0" prefWidth="270.0" promptText="Mark" />
+      <Button onAction="#editStudent" layoutX="336.0" layoutY="324.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" text="Edit Student" />
+      <Text fx:id="noticeName" fill="#ee0808" layoutX="189.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text  fx:id="noticeCode" fill="#ee0808" layoutX="189.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="noticeBirth" fill="#ee0808" layoutX="189.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="noticeMark" fill="#ee0808" layoutX="189.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="errors" fill="#ee0808" layoutX="189.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Button  onAction="#goToList" layoutX="21.0" layoutY="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="&lt;&lt; Back To List Student" />
+   </children>
+</Pane>
